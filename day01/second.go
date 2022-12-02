@@ -20,7 +20,7 @@ func compute(elve string)(int) {
     for _, value := range strings.Split(elve, "\n") {
         intVar, err := strconv.Atoi(value)
         if (err != nil) {
-            fmt.Print(err)
+            fmt.Println(err)
             return 0
         }
         result += intVar
@@ -42,11 +42,11 @@ func main() {
         check(err)
         chars := strings.Split(string(dat), "\n\n")
         if (len(chars) == 0) {
-            fmt.Print("File empty or unvalid")
+            fmt.Println("File empty or unvalid")
         } else {
             fmt.Println(getThreeBiggest(chars))
         }
     } else {
-        fmt.Print("Error, you need to pass a file as argument.")
+        fmt.Println("Error, you need to pass a file as argument.")
     }
 }
